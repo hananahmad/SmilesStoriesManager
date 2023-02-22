@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "networkinglayer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hananahmad/NetworkingLayer.git",
+      "state" : {
+        "revision" : "394580ddc519921bfdc7e737e6f05c0ae92e8276",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "smilesbasemainrequest",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hananahmad/SmilesBaseMainRequest.git",
+      "state" : {
+        "revision" : "5b3fafcd2524551bec168c19ce931f3146018325",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}

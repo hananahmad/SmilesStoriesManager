@@ -13,13 +13,13 @@ import NetworkingLayer
 open class StoriesViewModel: NSObject {
     
     // MARK: - INPUT. View event methods
-    enum Input {
+    public enum Input {
         case getStories(categoryId:Int, baseURL: String)
         case updateRestaurantWishlistStatus(operation: Int, restaurantId: String, baseURL: String)
         case updateOfferWishlistStatus(operation: Int, offerId: String, baseURL: String)
     }
     
-    enum Output {
+    public enum Output {
         case fetchStoriesDidSucceed(response: Stories)
         case updateWishlistStatusDidSucceed(response: WishListResponseModel)
         case fetchDidFail(error: Error)
@@ -27,16 +27,16 @@ open class StoriesViewModel: NSObject {
     }
     
     // MARK: -- Variables
-    private var output: PassthroughSubject<Output, Never> = .init()
-    private var cancellables = Set<AnyCancellable>()
-    private var stories: Stories?
+    public var output: PassthroughSubject<Output, Never> = .init()
+    public var cancellables = Set<AnyCancellable>()
+    public var stories: Stories?
     
 }
 
 // MARK: - INPUT. View event methods
 extension StoriesViewModel {
     
-    func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
+    public func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
         output = PassthroughSubject<Output, Never>()
         input.sink { [weak self] event in
             switch event {

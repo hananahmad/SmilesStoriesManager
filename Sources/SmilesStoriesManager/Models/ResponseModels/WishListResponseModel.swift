@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WishListResponseModel : Codable {
+public struct WishListResponseModel : Codable {
     
     let extTransactionId: String?
     let updateWishlistStatus : Bool?
